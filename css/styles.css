@@ -762,6 +762,6 @@ img {
     justify-content: center;  
     fill: transparent;
 }
-.modal-check:focus+.check-text span {
+.modal-check:focus + .check-text span {
   border-color: var(--color-ocean);
 }
