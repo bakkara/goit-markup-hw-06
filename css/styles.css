@@ -401,7 +401,7 @@ img {
   color: var(--color-cornflower);
 }
 .soc-footer-container {
-  margin-right: 80px;
+  margin-right: auto;
 }
 
 .soc-title {
@@ -446,6 +446,10 @@ img {
     margin-bottom: 16px;
     letter-spacing: 0.02em;
 }
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+}
   .subscribe-input {
     padding-top: 8px;
     padding-left: 16px;
@@ -459,7 +463,11 @@ img {
     border: 1px solid #ffffff;
     border-radius: 4px;
     transition: border-color var(--transition);
-    margin-right: 24px;
+    font-size: ;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #ffffff;
   }
 
   .subscribe-input::placeholder {
@@ -475,20 +483,20 @@ img {
   }
 
   .subscribe-button {
-    padding: 8px 64px 8px 24px;
+    padding: 8px 24px 8px 24px;
     height: 40px;
     position: relative;
-    
+    display: flex;
+    align-items: center;
+    gap: 16px;
   }
 
   .subscribe-button-icon {
-    position: absolute;
     right: 24px;
     width: 24px;
     height: 24px;
     top: 50%;
     fill: #ffffff;
-    transform: translateY(-50%);
   }
 
 
@@ -587,8 +595,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transition); 
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -628,7 +635,10 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--color-navy-blue);
-  padding-top: 72px; 
+  margin: 0 0 16px; 
+}
+.modal-field {
+  margin-bottom:  8px;
 }
 .modal-input {
   width: 100%;
@@ -640,21 +650,20 @@ img {
   color: var(--color-navy-blue);
   outline: transparent;
   transition: border-color var(--transition);
+  font-size: 12px;
 }
 
 .modal-label-text {
-  display: inline-flex;
+  display: block;
   margin-bottom: 4px;
   font-size: 12px;
-  line-height: 1.17px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--color-light-slate);
 }
 
 .modal-input-wrap {
-  display: block;
   position: relative;
-  margin-bottom: 4px;
 }
 
 .modal-input-icon {
@@ -670,17 +679,14 @@ img {
 }
 
 .modal-textarea {
-  display: block;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   resize: none;
-  padding-top: 8px;
-  padding-left: 16px;
   background-color: #FCFCFC;
   font-size: 12px;
-  line-height: 1.17px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--color-navy-blue-modal);
   outline: transparent;
@@ -688,10 +694,10 @@ img {
 }
 
 .modal-textarea::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: var(--color-navy-blue-modal);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--color-navy-blue-modal);
 }
 
 .modal-input:focus,
@@ -704,17 +710,9 @@ img {
   padding: 16px 32px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 24px;
   text-align: center;
   width: 169px;
   outline: transparent;
-}
-
-.checkbox {
-  margin-bottom: 24px;
-}
-.textarea {
-  margin-bottom: 16px;
 }
 
 .modal-check:checked + .check-text span{
@@ -729,6 +727,7 @@ img {
   letter-spacing: 0.04em;
   text-decoration-line: underline;
   color: var(--color-iris);
+  outline: transparent;
 }
 .check-text {
   display: flex;
@@ -740,12 +739,16 @@ img {
 }
 
 .check-text span {
-  width: 16px;
+    width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  
     fill: transparent;
 }
+.checkbox:focus, .modal-check:focus {
+    background-color: var(--color-ocean);
+    fill: #f4f4fd;
+ }
