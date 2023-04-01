@@ -679,6 +679,7 @@ img {
 }
 
 .modal-textarea {
+  display: block;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -694,7 +695,9 @@ img {
   outline: transparent;
   transition: border-color var(--transition);
 }
-
+.textarea {
+  margin-bottom: 16px;
+}
 .modal-textarea::placeholder {
   font-size: 12px;
   line-height: 1.17;
@@ -706,6 +709,9 @@ img {
 .modal-textarea:focus {
   border-color: var(--color-iris);
 }
+.checkbox-field {
+  margin-bottom: 24px;
+}
 
 .btn-send {
   display: block;
@@ -715,6 +721,7 @@ img {
   text-align: center;
   width: 169px;
   outline: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .modal-check:checked + .check-text span{
@@ -731,8 +738,13 @@ img {
   color: var(--color-iris);
   outline: transparent;
 }
+.chek-link:focus {
+  color: var(--color-ocean);
+}
+
 .check-text {
   display: flex;
+  align-items: baseline;
   gap: 8px;
   font-size: 12px;
   line-height: 1.17;
@@ -750,7 +762,6 @@ img {
     justify-content: center;  
     fill: transparent;
 }
-.checkbox:focus, .modal-check:focus {
-    background-color: var(--color-ocean);
-    fill: #f4f4fd;
- }
+.modal-check:focus+.check-text span {
+  border-color: var(--color-ocean);
+}
